@@ -12,10 +12,7 @@ driver.maximize_window()
 driver.get("http://the-internet.herokuapp.com/entry_ad.")
 
 sleep(5)
-search_delete = "p"
-delete_input = driver.find_element(By.CSS_SELECTOR, search_delete)
+search_delete = "div.modal-footer"
+delete_input = driver.find_element(By.CSS_SELECTOR, search_delete).click()
 
-delete_input.send_keys(Keys.ENTER)
-
-
-sleep(5)
+sleep(1)

@@ -13,7 +13,7 @@ driver.get("https://the-internet.herokuapp.com/add_remove_elements/")
 sleep(5)
 search_delete = "button"
 delete_input = driver.find_element(By.CSS_SELECTOR, search_delete)
-for n in range (0,5):
+for n in range (5):
     delete_input.send_keys(Keys.ENTER)
 
 result_delete = driver.find_element(By.CSS_SELECTOR, "button.added-manually").text

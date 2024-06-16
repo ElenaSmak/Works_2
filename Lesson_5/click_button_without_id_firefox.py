@@ -10,11 +10,12 @@ driver.maximize_window()
 #открыть сайт http://uitestingplayground.com/dynamicid
 driver.get("http://uitestingplayground.com/dynamicid")
 
-sleep(5)
-search_button = "button"
+sleep(1)
+for n in range (3):
+    search_button = "button.btn-primary" 
+    driver.find_element(By.CSS_SELECTOR, search_button).click()
+    sleep(1)
+    driver.find_element(By.CSS_SELECTOR, "h4").click()
 
-button_input = driver.find_element(By.CSS_SELECTOR, search_button)
-for n in range (0,3):
-    button_input.send_keys(Keys.ENTER)
-
-sleep(10)
+sleep(1)
+driver.quit()

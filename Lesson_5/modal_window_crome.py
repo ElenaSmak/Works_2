@@ -7,14 +7,12 @@ from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.maximize_window()
-#открыть сайт http://uitestingplayground.com/classattr
-driver.get("http://uitestingplayground.com/classattr")
+
+#открыть  http://the-internet.herokuapp.com/entry_ad.
+driver.get("http://the-internet.herokuapp.com/entry_ad")
 
 sleep(5)
-search_button = "btn-primary"
-result_input = driver.find_element(By.CSS_SELECTOR, search_button)
-for n in range (0,3):
-    result_input.send_keys(Keys.ENTER)
+search_delete = "div.modal-footer"
+delete_input = driver.find_element(By.CSS_SELECTOR, search_delete).click()
 
-
-sleep(10)
+sleep(1)
